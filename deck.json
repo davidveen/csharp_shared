@@ -124,7 +124,7 @@
             ],
             "sortf": 0,
             "tags": [
-                "Ch1::Flow::Tasks"
+                "Ch2::Value&Reference"
             ],
             "tmpls": [
                 {
@@ -1125,6 +1125,74 @@
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
                 "Ch1::Flow::Tasks"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Give an example of a value type (struct) in the .NET library.",
+                "DateTime",
+                "",
+                "",
+                "97"
+            ],
+            "flags": 0,
+            "guid": "i>=;hz0!p{",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "You want to store a Coord with values for x, y and z. Do you use a value type or a reference type?",
+                "Value type<div><br></div><div>You probably want to treat the coordinate as a single value, and not share coordinates among entities.</div>",
+                "",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4\n5\n6</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">struct</span> <span style=\"color: #0000FF; font-weight: bold\">Coord</span>\n{\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> x;\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> y;\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> z;\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "98"
+            ],
+            "flags": 0,
+            "guid": "J%M8I!M1&c",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "If x and y are reference types, what is the outcome of the following program?",
+                "x and y point to the same object after line 13. When x.Data is assigned 100, y.Data and x.Data both refer to the same value.",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">Program</span>\n{\n    <span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">Foo</span>\n    {\n        <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> Data { <span style=\"color: #008000; font-weight: bold\">get</span>; <span style=\"color: #008000; font-weight: bold\">set</span>; } = <span style=\"color: #666666\">42</span>;\n    }\n\n    <span style=\"color: #008000; font-weight: bold\">static</span> <span style=\"color: #008000; font-weight: bold\">void</span> <span style=\"color: #0000FF\">Main</span>(<span style=\"color: #B00040\">string</span>[] args)\n    {\n        <span style=\"color: #B00040\">var</span> y = <span style=\"color: #008000; font-weight: bold\">new</span> Foo();\n        <span style=\"color: #B00040\">var</span> x = <span style=\"color: #008000; font-weight: bold\">new</span> Foo();\n            \n        x = y;\n        x.Data = <span style=\"color: #666666\">100</span>;\n\n    }\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "",
+                "96"
+            ],
+            "flags": 0,
+            "guid": "k@LbH0OaTl",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What happens in the following program?<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">struct</span> <span style=\"color: #0000FF; font-weight: bold\">Foo</span>\n{\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> Data { <span style=\"color: #008000; font-weight: bold\">get</span>; <span style=\"color: #008000; font-weight: bold\">set</span>; } = <span style=\"color: #666666\">42</span>;\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "It doesn't compile.<div><br></div><div>It isn't possible to initialize data members in a structure. We can provide a parameterized constructor instead. The constructor must initialize all data members of the structure.</div>",
+                "<center><center></center><br></center>",
+                "<center><center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4\n5\n6\n7\n8</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">struct</span> <span style=\"color: #0000FF; font-weight: bold\">Foo</span>\n{\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> Data { <span style=\"color: #008000; font-weight: bold\">get</span>; <span style=\"color: #008000; font-weight: bold\">set</span>; }\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #0000FF\">Foo</span>(<span style=\"color: #B00040\">int</span> data)\n    {\n        Data = data;\n    }\n}\n</pre></div>\n</td></tr></tbody></table></center><br></center>",
+                "99"
+            ],
+            "flags": 0,
+            "guid": "eU*YeHU/WF",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
             ]
         }
     ]
