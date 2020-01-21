@@ -169,7 +169,7 @@
             "name": "Cloze",
             "sortf": 0,
             "tags": [
-                "Ch1::Flow::Tasks"
+                "Ch2::Value&Reference"
             ],
             "tmpls": [
                 {
@@ -1191,6 +1191,156 @@
             "flags": 0,
             "guid": "eU*YeHU/WF",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "How would you implement the Alien in the following program <i>as a value type</i>?",
+                "",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">static</span> <span style=\"color: #008000; font-weight: bold\">void</span> <span style=\"color: #0000FF\">Main</span>(<span style=\"color: #B00040\">string</span>[] args)\n{\n    <span style=\"color: #B00040\">var</span> x = <span style=\"color: #008000; font-weight: bold\">new</span> Alien(<span style=\"color: #666666\">100</span>, <span style=\"color: #666666\">100</span>, <span style=\"color: #666666\">16</span>);\n    <span style=\"color: #B00040\">var</span> y = <span style=\"color: #008000; font-weight: bold\">new</span> Alien(<span style=\"color: #666666\">0</span>, <span style=\"color: #666666\">0</span>, <span style=\"color: #666666\">42</span>);\n\n    Alien[] swarm = <span style=\"color: #008000; font-weight: bold\">new</span> Alien[<span style=\"color: #666666\">2</span>] { x, y };\n\n    <span style=\"color: #008000; font-weight: bold\">foreach</span> (<span style=\"color: #B00040\">var</span> alien <span style=\"color: #008000; font-weight: bold\">in</span> swarm)\n    {\n        Console.WriteLine(alien);\n    }\n}\n</pre></div>\n</td></tr></tbody></table>generates the following output:</center><center><br></center><center>Alien at 100,100 with 16 health<br>Alien at 0,0 with 42 health<br></center><br>",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">struct</span> <span style=\"color: #0000FF; font-weight: bold\">Alien</span>\n{\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> X;\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> Y;\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> HP;\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #0000FF\">Alien</span>(<span style=\"color: #B00040\">int</span> x, <span style=\"color: #B00040\">int</span> y, <span style=\"color: #B00040\">int</span> hp)\n    {\n        X = x;\n        Y = y;\n        HP = hp;\n    }\n\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">override</span> <span style=\"color: #B00040\">string</span> <span style=\"color: #0000FF\">ToString</span>()\n    {\n        <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"border: 1px solid #FF0000\">$</span><span style=\"color: #BA2121\">\"Alien at {X},{Y} with {HP} health\"</span>;\n    }\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "100"
+            ],
+            "flags": 0,
+            "guid": "AeMt!M[<(s",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What is the default value and type of an enumerated type?",
+                "An int starting at 0.",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4\n5\n6</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">enum</span> Tea\n{\n    Hot,\n    Cold,\n    Ice\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4\n5</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">enum</span> Soup : <span style=\"color: #B00040\">byte</span>\n{ \n    TooHot=<span style=\"color: #666666\">254</span>,\n    TooCold,\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "101"
+            ],
+            "flags": 0,
+            "guid": "E}O9vieE0C",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What is the output of the following alienating program?",
+                "The program creates 100 aliens with a fixed set of coordinates (0,0) and an HP property set anywhere between 1 and 100 (inclusive).<div>The program selects the aliens with HP above 50 (the \"healthy bunch\"), and prints their information.</div>",
+                "<center><center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">Program</span>\n{\n    <span style=\"color: #008000; font-weight: bold\">struct</span> <span style=\"color: #0000FF; font-weight: bold\">Coord</span>\n    {\n        <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> X;\n        <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> Y;\n\n        <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #0000FF\">Coord</span>(<span style=\"color: #B00040\">int</span> x, <span style=\"color: #B00040\">int</span> y)\n        {\n            X = x;\n            Y = y;\n        }\n    }\n\n    <span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">Alien</span>\n    {\n        <span style=\"color: #008000; font-weight: bold\">static</span> Random random = <span style=\"color: #008000; font-weight: bold\">new</span> Random();\n\n        <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> X;\n        <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> Y;\n        <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> HP;\n        <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #0000FF\">Alien</span>(<span style=\"color: #B00040\">int</span> x, <span style=\"color: #B00040\">int</span> y)\n        {\n            X = x;\n            Y = y;\n            HP = random.Next(<span style=\"color: #666666\">1</span>, <span style=\"color: #666666\">101</span>);\n        }\n\n        <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">override</span> <span style=\"color: #B00040\">string</span> <span style=\"color: #0000FF\">ToString</span>()\n        {\n            <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"border: 1px solid #FF0000\">$</span><span style=\"color: #BA2121\">\"Alien at {X},{Y} with {HP} health\"</span>;\n        }\n    }\n\n    <span style=\"color: #008000; font-weight: bold\">static</span> <span style=\"color: #008000; font-weight: bold\">void</span> <span style=\"color: #0000FF\">Main</span>(<span style=\"color: #B00040\">string</span>[] args)\n    {\n        <span style=\"color: #B00040\">var</span> x = <span style=\"color: #008000; font-weight: bold\">new</span> Alien(<span style=\"color: #666666\">100</span>, <span style=\"color: #666666\">100</span>);\n        <span style=\"color: #B00040\">var</span> y = <span style=\"color: #008000; font-weight: bold\">new</span> Alien(<span style=\"color: #666666\">0</span>, <span style=\"color: #666666\">0</span>);\n\n        List&lt;Alien&gt; swarm = Enumerable\n            .Repeat(<span style=\"color: #008000; font-weight: bold\">new</span> Coord(<span style=\"color: #666666\">0</span>, <span style=\"color: #666666\">0</span>), <span style=\"color: #666666\">100</span>)\n            .Select(start =&gt; <span style=\"color: #008000; font-weight: bold\">new</span> Alien(start.X, start.Y))\n            .ToList();\n\n        <span style=\"color: #B00040\">var</span> healthyBunch = <span style=\"color: #008000; font-weight: bold\">from</span> alien <span style=\"color: #008000; font-weight: bold\">in</span> swarm\n                           <span style=\"color: #008000; font-weight: bold\">where</span> alien.HP &gt; <span style=\"color: #666666\">50</span>\n                           <span style=\"color: #008000; font-weight: bold\">select</span> alien;\n\n        <span style=\"color: #008000; font-weight: bold\">foreach</span> (<span style=\"color: #B00040\">var</span> buff <span style=\"color: #008000; font-weight: bold\">in</span> healthyBunch)\n        {\n            Console.WriteLine(buff);\n        }\n    }\n}\n</pre></div>\n</td></tr></tbody></table></center></center><br>",
+                "",
+                ""
+            ],
+            "flags": 0,
+            "guid": "P4uYXX0A2:",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Why can a reference type not be kept on the <i>stack</i>?",
+                "<div>The stack stores variables of value type, and is allocated and removed upon entering or leaving a block.</div>Because the reference may need to be kept when entering or leaving a block (e.g. a function) reference type instances need to be kept on the <i>heap</i>. Garbage collection decides whether to keep the reference type instance depending on whether there are still active references to it.",
+                "",
+                "",
+                "103"
+            ],
+            "flags": 0,
+            "guid": "vn)ulo3Y%Q",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Structure instances are always created on the <i>stack</i>. Correct?",
+                "No.<div><br></div><div>While generally true, a structure is created on the <i>heap</i>&nbsp;when used in a closure. Why? Because it needs to be maintained even though the program has already left the block in which it was created.</div>",
+                "",
+                "",
+                "99"
+            ],
+            "flags": 0,
+            "guid": "DPfdr+V~eS",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "How can we limit the MyStack class to accept only iterable types?",
+                "By specifying a generic constraint to the interface IEnumerable.",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">MyStack</span>&lt;T&gt;\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">MyStack</span>&lt;T&gt; <span style=\"color: #008000; font-weight: bold\">where</span> T : IEnumerable\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "104"
+            ],
+            "flags": 0,
+            "guid": "K~A:,%VR:d",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Have you investigated how generic collection classes work to learn more about generic features in C#?",
+                "Yes, of course! :sweaty-smile:",
+                "",
+                "",
+                "105"
+            ],
+            "flags": 0,
+            "guid": "tkpO3zIMnU",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What does the <i>new</i>&nbsp;keyword do? (3)",
+                "<ul>\n<li>Loads the program code that implements the class into memory\n</li>\n<li>Initializes any static members and calls the static constructor, if this is the first object of its kind\n</li>\n<li>Calls the constructor class\n</li>\n</ul>",
+                "",
+                "",
+                "110"
+            ],
+            "flags": 0,
+            "guid": "H2^.9?:GPt",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2::Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "A class can contain members that are&nbsp;{{c1::methods}}, {{c1::data variables}}, or {{c1::properties}}. {{c1::Class methods}} allow a class {{c2::to provide behaviours that can be used by code running in other classes}}. {{c1::Data variables}} allow a class {{c2::to maintain state and manage the storage of information}}. {{c1::Properties}} provide a means {{c2::for managing access to data within a class}}.",
+                ""
+            ],
+            "flags": 0,
+            "guid": "u0y#+,^xiV",
+            "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
             "tags": [
                 "Ch2::Value&Reference"
             ]
