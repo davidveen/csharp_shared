@@ -124,7 +124,7 @@
             ],
             "sortf": 0,
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2"
             ],
             "tmpls": [
                 {
@@ -169,7 +169,8 @@
             "name": "Cloze",
             "sortf": 0,
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Types"
             ],
             "tmpls": [
                 {
@@ -1175,7 +1176,7 @@
             "data": "",
             "fields": [
                 "Give an example of a value type (struct) in the .NET library.",
-                "DateTime",
+                "Date, DateTime, all numberic data types, bool, char, structures, enumerations",
                 "",
                 "",
                 "97"
@@ -1264,7 +1265,7 @@
             "__type__": "Note",
             "data": "",
             "fields": [
-                "What is the default value and type of an enumerated type?",
+                "What is the default value and type of an enumerated type?<br>",
                 "An int starting at 0.",
                 "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4\n5\n6</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">enum</span> Tea\n{\n    Hot,\n    Cold,\n    Ice\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
                 "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4\n5</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">enum</span> Soup : <span style=\"color: #B00040\">byte</span>\n{ \n    TooHot=<span style=\"color: #666666\">254</span>,\n    TooCold,\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
@@ -1399,6 +1400,146 @@
             "tags": [
                 "Ch2",
                 "Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What's the value of y.Data after line 16?",
+                "42.<div><br></div><div>Because Foo is a value type, the assignment of y to x does not link the two by reference as it would had Foo been a class.</div>",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">struct</span> <span style=\"color: #0000FF; font-weight: bold\">Foo</span>\n{\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #B00040\">int</span> Number { <span style=\"color: #008000; font-weight: bold\">get</span>; <span style=\"color: #008000; font-weight: bold\">set</span>; }\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #0000FF\">Foo</span>(<span style=\"color: #B00040\">int</span> number)\n    {\n        Number = number;\n    }\n}\n\n<span style=\"color: #008000; font-weight: bold\">static</span> <span style=\"color: #008000; font-weight: bold\">void</span> <span style=\"color: #0000FF\">Main</span>(<span style=\"color: #B00040\">string</span>[] args)\n{\n    <span style=\"color: #B00040\">var</span> y = <span style=\"color: #008000; font-weight: bold\">new</span> Foo(<span style=\"color: #666666\">42</span>);\n    <span style=\"color: #B00040\">var</span> x = <span style=\"color: #008000; font-weight: bold\">new</span> Foo(<span style=\"color: #666666\">42</span>);\n\n    x = y;\n    x.Number = <span style=\"color: #666666\">100</span>;\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "",
+                ""
+            ],
+            "flags": 0,
+            "guid": "x^8]M59@js",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What is the difference between <i>overriding </i>and <i>overloading </i>a method?",
+                "A method override refers to a child class re-implementing a method provided by a parent or base class in a class hierarchy.<div>The overridden method has the same name and signature as the parent method. Only methods marked <i>virtual</i>&nbsp;can be overridden.</div><div><br><div>Overloading a method means implementing a method with the same name but a different signature.</div></div>",
+                "",
+                "",
+                "115"
+            ],
+            "flags": 0,
+            "guid": "ya=4|`.&};",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Value&Reference"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What are possible situations in which strong typing can cause problems? (4)",
+                "In general; when working with code that has its origin outside C#, e.g.<div><br></div><div>- Common Object Model (COM)</div><div>- Document Object model (DOM)</div><div>- C# reflection</div><div>- interop with dynamic languages</div>",
+                "",
+                "",
+                "122"
+            ],
+            "flags": 0,
+            "guid": "htEuExMk<C",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Types"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "The keyword {{c1::dynamic}} is used to {{c2::suspend static type checking for specific items}}.",
+                ""
+            ],
+            "flags": 0,
+            "guid": "du=RFa)3Uk",
+            "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Types"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What will the following program NOT do?",
+                "Throw a compile-time error.<div><br></div><div>We don't know the implementation of Foo or Bar, so the program might fail at runtime or succesfully perform an implicit conversion from Foo to Bar (if implemented). The dynamic keyword prevents checking the validity of the assignment at compile-time.</div>",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4\n5</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">static</span> <span style=\"color: #008000; font-weight: bold\">void</span> <span style=\"color: #0000FF\">Main</span>(<span style=\"color: #B00040\">string</span>[] args)\n{\n    <span style=\"color: #B00040\">dynamic</span> foo = <span style=\"color: #008000; font-weight: bold\">new</span> Foo();\n    Bar bar = foo;\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "",
+                "123"
+            ],
+            "flags": 0,
+            "guid": "p.TE@]*Z*g",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Conversion",
+                "Types"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What does an ExpandoObject do, and when would you want to use one?",
+                "An ExpandoObject instance allows us to dynamically add properties to it.<div><br></div><div>This is useful when creating data structures from markup languages such as JSON or XML</div>",
+                "",
+                "",
+                "125"
+            ],
+            "flags": 0,
+            "guid": "v[=j[c/#>y",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Types"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Which signature is NOT valid?",
+                "2.<div><br></div><div>An operator must be declared public static</div>",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n\n2\n\n3\n\n4</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">MyClass</span>&lt;T&gt; <span style=\"color: #008000; font-weight: bold\">where</span> T : IEnumerable\n\n<span style=\"color: #008000; font-weight: bold\">private</span> <span style=\"color: #008000; font-weight: bold\">explicit</span> <span style=\"color: #008000; font-weight: bold\">operator</span> <span style=\"color: #0000FF\">int</span>(Foo f)\n\n<span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">virtual</span> <span style=\"color: #008000; font-weight: bold\">void</span> <span style=\"color: #0000FF\">DoStuff</span>()\n\n<span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #0000FF\">Foo</span>(<span style=\"color: #B00040\">int</span> x, <span style=\"color: #B00040\">int</span> y) : <span style=\"color: #008000; font-weight: bold\">this</span>(x, y, <span style=\"color: #666666\">42</span>)\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "",
+                ""
+            ],
+            "flags": 0,
+            "guid": "e1GoRrP=hG",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What are the access modifiers? (4)",
+                "- Private (default)<div>- Public</div><div>- Protected</div><div>- Internal</div>",
+                "",
+                "",
+                "132"
+            ],
+            "flags": 0,
+            "guid": "Qt60^_`qLy",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2"
             ]
         }
     ]
