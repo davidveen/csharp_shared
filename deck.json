@@ -615,7 +615,10 @@
             "flags": 0,
             "guid": "C9X(]>PdWf",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
-            "tags": []
+            "tags": [
+                "Ch1",
+                "Threads"
+            ]
         },
         {
             "__type__": "Note",
@@ -805,7 +808,9 @@
             "guid": "o|B5^gf]:)",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Threads::AsyncAwait"
+                "AsyncAwait",
+                "Ch1",
+                "Threads"
             ]
         },
         {
@@ -822,7 +827,9 @@
             "guid": "Ezzl}Ke|+D",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Threads::AsyncAwait"
+                "AsyncAwait",
+                "Ch1",
+                "Threads"
             ]
         },
         {
@@ -836,7 +843,9 @@
             "guid": "~_TR5]-:]",
             "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
             "tags": [
-                "Ch1::Threads::AsyncAwait"
+                "AsyncAwait",
+                "Ch1",
+                "Threads"
             ]
         },
         {
@@ -853,7 +862,9 @@
             "guid": "xPe7bv1b:V",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Threads::AsyncAwait"
+                "AsyncAwait",
+                "Ch1",
+                "Threads"
             ]
         },
         {
@@ -870,7 +881,8 @@
             "guid": "Ec,hbH0[Ui",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Loops"
+                "Ch1",
+                "Loops"
             ]
         },
         {
@@ -884,7 +896,8 @@
             "guid": "Q~~9>FU8?Y",
             "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
             "tags": [
-                "Ch1::Loops"
+                "Ch1",
+                "Loops"
             ]
         },
         {
@@ -901,7 +914,9 @@
             "guid": "Iktc0fMoP5",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Operators"
+                "Ch1",
+                "Flow",
+                "Operators"
             ]
         },
         {
@@ -918,7 +933,9 @@
             "guid": "Q/1c0m9ohF",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Operators"
+                "Ch1",
+                "Flow",
+                "Operators"
             ]
         },
         {
@@ -932,7 +949,9 @@
             "guid": "ea>+:dW+~a",
             "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Operators"
+                "Ch1",
+                "Flow",
+                "Operators"
             ]
         },
         {
@@ -949,7 +968,9 @@
             "guid": "NeMj$#W64e",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Operators"
+                "Ch1",
+                "Flow",
+                "Operators"
             ]
         },
         {
@@ -963,7 +984,9 @@
             "guid": "j@RU-Q/160",
             "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Operators"
+                "Ch1",
+                "Flow",
+                "Operators"
             ]
         },
         {
@@ -977,7 +1000,9 @@
             "guid": "K,dCq3E*pp",
             "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Delegates"
+                "Ch1",
+                "Delegates",
+                "Flow"
             ]
         },
         {
@@ -994,7 +1019,9 @@
             "guid": "ho4m?(>nU_",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Events"
+                "Ch1",
+                "Events",
+                "Flow"
             ]
         },
         {
@@ -1011,7 +1038,9 @@
             "guid": "Q^*G-H`e0_",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Events"
+                "Ch1",
+                "Events",
+                "Flow"
             ]
         },
         {
@@ -1028,7 +1057,9 @@
             "guid": "QKUehNhMvK",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Events"
+                "Ch1",
+                "Events",
+                "Flow"
             ]
         },
         {
@@ -1045,7 +1076,9 @@
             "guid": "Hi3ub~kIlm",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Events"
+                "Ch1",
+                "Events",
+                "Flow"
             ]
         },
         {
@@ -1062,7 +1095,9 @@
             "guid": "nlQDZ{)F}X",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Tasks"
+                "Ch1",
+                "Flow",
+                "Tasks"
             ]
         },
         {
@@ -1076,7 +1111,9 @@
             "guid": "g;fqf:G7+b",
             "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Tasks"
+                "Ch1",
+                "Flow",
+                "Tasks"
             ]
         },
         {
@@ -1090,7 +1127,9 @@
             "guid": "sxF5lYK}KB",
             "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Tasks"
+                "Ch1",
+                "Flow",
+                "Tasks"
             ]
         },
         {
@@ -1107,7 +1146,9 @@
             "guid": "j{{.24W.+2",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Tasks"
+                "Ch1",
+                "Flow",
+                "Tasks"
             ]
         },
         {
@@ -1124,7 +1165,9 @@
             "guid": "s/{)<-eonQ",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch1::Flow::Tasks"
+                "Ch1",
+                "Flow",
+                "Tasks"
             ]
         },
         {
@@ -1141,7 +1184,8 @@
             "guid": "i>=;hz0!p{",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1158,7 +1202,8 @@
             "guid": "J%M8I!M1&c",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1175,7 +1220,8 @@
             "guid": "k@LbH0OaTl",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1192,7 +1238,8 @@
             "guid": "eU*YeHU/WF",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1209,7 +1256,8 @@
             "guid": "AeMt!M[<(s",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1226,7 +1274,8 @@
             "guid": "E}O9vieE0C",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1243,7 +1292,8 @@
             "guid": "P4uYXX0A2:",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1260,7 +1310,8 @@
             "guid": "vn)ulo3Y%Q",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1277,7 +1328,8 @@
             "guid": "DPfdr+V~eS",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1294,7 +1346,8 @@
             "guid": "K~A:,%VR:d",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1311,7 +1364,8 @@
             "guid": "tkpO3zIMnU",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1328,7 +1382,8 @@
             "guid": "H2^.9?:GPt",
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         },
         {
@@ -1342,7 +1397,8 @@
             "guid": "u0y#+,^xiV",
             "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
             "tags": [
-                "Ch2::Value&Reference"
+                "Ch2",
+                "Value&Reference"
             ]
         }
     ]
