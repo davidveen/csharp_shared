@@ -125,7 +125,8 @@
             ],
             "sortf": 0,
             "tags": [
-                "Ch2"
+                "Ch2",
+                "Inheritance"
             ],
             "tmpls": [
                 {
@@ -171,7 +172,7 @@
             "sortf": 0,
             "tags": [
                 "Ch2",
-                "Types"
+                "Inheritance"
             ],
             "tmpls": [
                 {
@@ -1541,6 +1542,219 @@
             "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
             "tags": [
                 "Ch2"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What's an interface?",
+                "<div>An interface is a specification of how one component can use another. They allow components in a program look at each other's abilities rather than what they actually are.</div><div><br></div>A 'shopping list' of methods, so that when a class implements each of those methods, we can say the class implements the interface.<div><br></div>",
+                "",
+                "",
+                "139"
+            ],
+            "flags": 0,
+            "guid": "ndnCe^@%0<",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Interface"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "An interface can be implemented, but it can never be instantiated. Explain.",
+                "A class can implement an interface, and the class can be instantiated. But an interface is just a description of a set of methods, without an actual implementation of those methods. Therefore it cannot itself be instantiated.<div><br></div><div>The statements on lines 9 and 11 check that the instantiated object x implements the IFoo interface, not that object x&nbsp;<i>is</i>&nbsp;the interface.</div>",
+                "<center><center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">interface</span> IFoo\n{\n    <span style=\"color: #B00040\">string</span> <span style=\"color: #0000FF\">ToString</span>();\n}\n\n<span style=\"color: #008000; font-weight: bold\">static</span> <span style=\"color: #008000; font-weight: bold\">void</span> <span style=\"color: #0000FF\">Main</span>(<span style=\"color: #B00040\">string</span>[] args)\n{\n    <span style=\"color: #B00040\">var</span> x = <span style=\"color: #008000; font-weight: bold\">new</span> Foo();\n    IFoo foo = x as IFoo;\n\n    <span style=\"color: #008000; font-weight: bold\">if</span> (foo <span style=\"color: #008000; font-weight: bold\">is</span> IFoo)\n        Console.WriteLine(<span style=\"color: #BA2121\">\"foo\"</span>);\n}\n</pre></div>\n</td></tr></tbody></table></center></center><br>",
+                "",
+                "144"
+            ],
+            "flags": 0,
+            "guid": "mvq61GOp`A",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Interface"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What's the difference between (IFoo)x and x as IFoo?",
+                "The <i>as</i>&nbsp;keyword assigns a reference to x to foo if x implements the IFoo interface, <i>or</i>&nbsp;null if x does not implement IFoo.<div><br></div><div>Type casting x to IFoo returns a reference to x if x implements the IFoo interface, <i>or</i>&nbsp;throws an exception.</div>",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\">IFoo foo = x <span style=\"color: #008000; font-weight: bold\">as</span> IFoo;\nIFoo bar = (IFoo)x;\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "",
+                "144"
+            ],
+            "flags": 0,
+            "guid": "L`WyGE_n5#",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Interface"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What is the one good reason to inherit from a base class?",
+                "",
+                "When after careful consideration of the design you find that related requirements not only share an interface but also share a lot of behaviour. By inheriting from a base class you can reuse code that implements the overlapping behaviour, while adding or overriding behaviours that differ.",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">Waldo</span>: Foo\n{\n\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                ""
+            ],
+            "flags": 0,
+            "guid": "I6Cn5=k|k#",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Inheritance"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "The {{c1::is}}&nbsp;operator determines {{c2::if the type of a given object is in a particular class hierarchy or implements a specified interface}}.",
+                "Note that a &lt;child&gt; instance can be safely said to be of type &lt;parent&gt;, but a &lt;parent&gt; is not of type &lt;child&gt;; the child can have behaviours that the parent does not."
+            ],
+            "flags": 0,
+            "guid": "A?S#1f!>n>",
+            "note_model_uuid": "e48ef04b-3b80-11ea-923c-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Inheritance"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What does the <i>protected</i>&nbsp;keyword do?",
+                "It's an access modifier. A data member that's protected can be used by subclasses but not by anyone else. (private except for children)",
+                "",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">abstract</span> <span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">BankAccount</span>\n{\n    <span style=\"color: #008000; font-weight: bold\">protected</span> <span style=\"color: #B00040\">long</span> _balance;\n\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">abstract</span> <span style=\"color: #B00040\">bool</span> <span style=\"color: #0000FF\">Withdraw</span>(<span style=\"color: #B00040\">int</span> amount);\n}\n\n<span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">WithdrawalAccount</span>: BankAccount\n{\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">override</span> <span style=\"color: #B00040\">bool</span> <span style=\"color: #0000FF\">Withdraw</span>(<span style=\"color: #B00040\">int</span> amount)\n    {\n        <span style=\"color: #B00040\">var</span> check = _balance &gt;= amount;\n\n        <span style=\"color: #008000; font-weight: bold\">if</span> (check)\n            _balance -= amount;\n\n        <span style=\"color: #008000; font-weight: bold\">return</span> check;\n    }\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "145"
+            ],
+            "flags": 0,
+            "guid": "d*4PNM.)+0",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Inheritance"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What does the <i>abstract</i>&nbsp;keyword do?",
+                "It marks a base class and one or more of its methods as requiring implementation by a subclass. It differs from the <i>virtual</i>&nbsp;keyword in that a virtual method does have a base implementation, whereas an abstract method does not. Declaring a method abstract requires that the class is also declared abstract.",
+                "",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">abstract</span> <span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">BankAccount</span>\n{\n    <span style=\"color: #008000; font-weight: bold\">protected</span> <span style=\"color: #B00040\">long</span> _balance;\n\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">abstract</span> <span style=\"color: #B00040\">bool</span> <span style=\"color: #0000FF\">Withdraw</span>(<span style=\"color: #B00040\">int</span> amount);\n}\n\n<span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">WithdrawalAccount</span>: BankAccount\n{\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">override</span> <span style=\"color: #B00040\">bool</span> <span style=\"color: #0000FF\">Withdraw</span>(<span style=\"color: #B00040\">int</span> amount)\n    {\n        <span style=\"color: #B00040\">var</span> check = _balance &gt;= amount;\n\n        <span style=\"color: #008000; font-weight: bold\">if</span> (check)\n            _balance -= amount;\n\n        <span style=\"color: #008000; font-weight: bold\">return</span> check;\n    }\n}\n</pre></div>\n</td></tr></tbody></table></center><br>",
+                "150"
+            ],
+            "flags": 0,
+            "guid": "g[)V@C_OOv",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Inheritance"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What does the <i>virtual </i>keyword do?",
+                "Enables a method in a base class to be <i>overridden</i>&nbsp;by a subclass.",
+                "",
+                "",
+                "145"
+            ],
+            "flags": 0,
+            "guid": "qAOLfbszGC",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Inheritance"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What does the <i>override</i>&nbsp;keyword do?",
+                "A method declared with the override keyword hides the implementation of a method declared <i>virtual</i>&nbsp;in the base class.",
+                "",
+                "",
+                "145"
+            ],
+            "flags": 0,
+            "guid": "ytcS:~nb((",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Inheritance"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What's the difference between <i>base </i>and <i>this</i>&nbsp;in class constructors?",
+                "A constructor can refer to another constructor for its implementation. With the <i>base</i>&nbsp;keyword it refers to a constructor of a given signature in the base class. With <i>this</i>, it simply refers to a constructor of a given signature in the current class.",
+                "",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\">1\n2\n3\n4\n5</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">Waldo</span>: Foo\n{\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #0000FF\">Waldo</span>(<span style=\"color: #B00040\">int</span> number) : <span style=\"color: #008000; font-weight: bold\">base</span>(number) { }\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #0000FF\">Waldo</span>() : <span style=\"color: #008000; font-weight: bold\">this</span>(<span style=\"color: #666666\">666</span>) { }\n}\n</pre></div>\n</td></tr></tbody></table></center>",
+                "149"
+            ],
+            "flags": 0,
+            "guid": "zFzM[xnBS?",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Inheritance"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What happens in this program?<div><br></div><div><center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">WithdrawalAccount</span>: BankAccount, IFoo\n{\n    <span style=\"color: #008000; font-weight: bold\">public</span> <span style=\"color: #008000; font-weight: bold\">override</span> <span style=\"color: #B00040\">bool</span> IFoo.Withdraw(<span style=\"color: #B00040\">int</span> amount)\n    {\n        <span style=\"color: #B00040\">var</span> check = _balance &gt;= amount;\n\n        <span style=\"color: #008000; font-weight: bold\">if</span> (check)\n            _balance -= amount;\n\n        <span style=\"color: #008000; font-weight: bold\">return</span> check;\n    }\n}\n</pre></div>\n</td></tr></tbody></table></center></div>",
+                "It doesn't compile.<div><br></div><div>The subclass WithdrawalAccount is a subclass of BankAccount, which has a virtual or abstract method Withdraw. However, the Withdraw method is also a requirement for implementing the IFoo interface, and is declared explicitly as an interface method. C# does not allow overriding explicit implementations of interface methods. Therefore, the method can either be an override method or an interface method, but not both.</div>",
+                "",
+                "",
+                "147"
+            ],
+            "flags": 0,
+            "guid": "OFV.4[%#l)",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Inheritance"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What does the <i>sealed</i>&nbsp;keyword do?",
+                "Can be used to stop a method or an entire class from being overridden or replaced by a subclass.",
+                "",
+                "<center><table class=\"highlighttable\"><tbody><tr><td><div class=\"linenodiv\" style=\"background-color: #f0f0f0; padding-right: 10px\"><pre style=\"line-height: 125%\"> 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19</pre></div></td><td class=\"code\"><div class=\"highlight\" style=\"background: #f8f8f8\"><pre style=\"line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">sealed</span> <span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">BankAccount</span>: IFoo\n{\n    <span style=\"color: #008000; font-weight: bold\">protected</span> <span style=\"color: #B00040\">long</span> _balance;\n\n    <span style=\"color: #B00040\">bool</span> IFoo.Withdraw(<span style=\"color: #B00040\">int</span> amount) { <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #008000; font-weight: bold\">true</span>; }\n}\n\n<span style=\"color: #008000; font-weight: bold\">class</span> <span style=\"color: #0000FF; font-weight: bold\">WithdrawalAccount</span>: BankAccount, IFoo\n{\n    <span style=\"color: #B00040\">bool</span> IFoo.Withdraw(<span style=\"color: #B00040\">int</span> amount)\n    {\n        <span style=\"color: #B00040\">var</span> check = _balance &gt;= amount;\n\n        <span style=\"color: #008000; font-weight: bold\">if</span> (check)\n            _balance -= amount;\n\n        <span style=\"color: #008000; font-weight: bold\">return</span> check;\n    }\n}\n</pre></div>\n</td></tr></tbody></table></center>NB. this does not compile, because it's not possible to inherit from a sealed class.",
+                "148"
+            ],
+            "flags": 0,
+            "guid": "OTrSU!Es:7",
+            "note_model_uuid": "e48ea258-3b80-11ea-9b6b-6214b3b1c8f9",
+            "tags": [
+                "Ch2",
+                "Inheritance"
             ]
         }
     ]
